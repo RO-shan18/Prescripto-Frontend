@@ -3,23 +3,24 @@ import { assets } from '../assets/assets'
 
 const Header = () => {
   return (
-    <div className='bg-primary w-4/5 m-auto text-white flex px-20 mt-20'>
+    <div className='flex justify-evenly items-center'>
         {/* ------------Left Side------------ */}
-        <div className='flex flex-col w-4/5 m-auto gap-4'>
-        <h1 className='text-6xl'>Book Appointment <br/>
+        <div className='bg-primary m-auto lg:w-5/5 w-4/5 text-white flex lg:flex-nowrap  lg:p-0 pt-10 px-4 flex-wrap justify-evenly mt-10 sm:mt-20 gap-7'>
+        <div className='flex flex-col items-center lg:items-start justify-center lg:justify-start m-auto gap-4'>
+        <h1 className='text-center sm:text-left text-2xl sm:text-3xl lg:text-5xl font-semibold'>Book Appointment <br className='lg:block hidden'/>
         With Trusted Doctors </h1> 
-        <div className='flex w-6/7 gap-3'>
-            <img src={assets.group_profiles} className='w-28'/>
-            <p>Simply browse through our extensive list of trusted doctors,schedule your appointment hassle-free.</p>
+        <div className='flex gap-3 sm:flex-nowrap flex-wrap text-center sm:text-left items-center justify-center'>
+            <img src={assets.group_profiles} className=':w-20 h-10'/>
+            <p className='text-[12px] sm:text-sm'>Simply browse through our extensive list of trusted doctors, <br className='lg:block hidden'/>
+            schedule your appointment hassle-free.</p>
         </div>
-        <a href="#speciality" className='bg-white rounded-full pl-5 py-2 text-black w-2/5 gap-2 items-center flex'>
-            <p>Book appointment</p>
+        <a href="#speciality" className='bg-white rounded-full pl-8 sm:pl-5 py-2 w-48 text-black gap-2 items-center flex'>
+            <p className='text-[12px] sm:text-sm'>Book appointment</p>
             <img src={assets.arrow_icon}/>
         </a>
         </div>
         {/* ------------Right Side ---------- */}
-        <div>
-            <img src={assets.header_img} />
+            <img className='w-[80%] lg:w-[50%]' src={assets.header_img} />
         </div>
     </div>
   )
