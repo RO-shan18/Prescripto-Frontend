@@ -11,7 +11,8 @@ export default {
       },
       gridTemplateColumns : {
         "3col" : "3fr 1fr 1fr",
-        "2col" : "150px 500px"
+        "2col" : "150px 500px",
+        "2cols": "150px 100px",
       },
     },
   },
