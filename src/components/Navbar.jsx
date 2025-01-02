@@ -8,7 +8,7 @@ const Navbar = () => {
   const [token, settoken] = useState(true);
 
   return (
-    <div className="flex items-center justify-between px-6 sm:px-12 py-4 m-3 text-sm border-b ">
+    <div className="flex items-center justify-between px-3 sm:px-12 py-4 m-3 text-sm border-b ">
       <img onClick={()=> navigate("/")} className="w-32 sm:w-40" src={assets.logo} alt="web-logo" />
       <ul className="sm:flex hidden items-start justify-start gap-5 text-black">
         <NavLink to="/">
@@ -45,7 +45,7 @@ const Navbar = () => {
         ) : (
           <button
             onClick={() => navigate("/Login")}
-            className="bg-primary px-4 py-3 rounded-3xl text-white"
+            className="bg-primary md:text-sm text-[12px] md:px-4 md:py-3 p-2 rounded-3xl text-white"
           >
             Create Account
           </button>

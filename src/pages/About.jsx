@@ -22,7 +22,7 @@ const About = () => {
         <div className='flex lg:flex-row flex-col w-11/12 mx-auto'>
           <div className='flex flex-col border border-gray-400 px-6 py-3 sm:px-12 sm:py-6 md:px-24 md:py-12 gap-4  hover:bg-primary hover:text-white transition-all duration-500 ease-in-out cursor-pointer'><b className='md:text-md text-sm'>EFFICIENCY:</b>
           <p className='text-gray-500 text-[12px] md:text-sm'>Streamlined appointment scheduling that fits into your busy lifestyle.</p></div>
-          <div className='flex flex-col border border-gray-400 px-6 py-3 sm: px-12sm: py-6 md:px-24 md:py-12 gap-4 hover:bg-primary hover:text-white transition-all duration-500 ease-in-out cursor-pointer'><b className='md:text-md text-sm'>CONVENIENCE:</b>
+          <div className='flex flex-col border border-gray-400 px-6 py-3 sm:px-12 sm:py-6 md:px-24 md:py-12 gap-4 hover:bg-primary hover:text-white transition-all duration-500 ease-in-out cursor-pointer'><b className='md:text-md text-sm'>CONVENIENCE:</b>
           <p className='text-gray-500 text-[12px] md:text-sm'>Access to a network of trusted healthcare professionals in your area.</p></div>
           <div className='flex flex-col border border-gray-400 px-6 py-3 sm:px-12 sm:py-6 md:px-24 md:py-12 gap-4 hover:bg-primary hover:text-white transition-all duration-500 ease-in-out cursor-pointer'><b className='md:text-md text-sm'>PERSONALIZATION:</b>
           <p className='text-gray-500 text-[12px] md:text-sm'>Tailored recommendations and reminders to help you stay on top of your health.</p></div>
