@@ -25,9 +25,9 @@ const Doctors = () => {
 
   return (
     <div className="w-4/5 m-auto flex flex-col gap-6">
-      <h1 className="text-gray-600">Browse through the doctors specialist.</h1>
-      <div className="flex gap-6">
-        <div className="flex flex-col gap-3">
+      <h1 className="text-gray-600 text-sm md:text-md">Browse through the doctors specialist.</h1>
+      <div className="flex gap-6 lg:flex-row flex-col">
+        <div className="flex flex-row lg:flex-col gap-3 lg:overflow-visible overflow-x-scroll">
           <p
             onClick={() =>
               speciality === "General physician"
@@ -35,7 +35,7 @@ const Doctors = () => {
                 : Navigate("/Doctor/General physician")
             }
             className={
-              `text-gray-600 border-2 px-5 py-1 cursor-pointer ${speciality ===
+              `text-gray-600 border-2 px-5 py-1 text-sm md:text-md cursor-pointer ${speciality ===
               "General physician"
                 ? "bg-gray-300 text-black"
                 : ""}
@@ -50,9 +50,9 @@ const Doctors = () => {
                 : Navigate("/Doctor/Dermatologist")
             }
             className={
-              `text-gray-600 border-2 px-5 py-1 cursor-pointer ${speciality ===
+              `text-gray-600 border-2 px-5 py-1 text-sm md:text-md cursor-pointer ${speciality ===
               "Dermatologist"
-                ? "bg-gray-300 text-black"
+                ? "bg-gray-300 text-black "
                 : ""}
              `}
           >
@@ -65,7 +65,7 @@ const Doctors = () => {
                 : Navigate("/Doctor/Pediatricians")
             }
             className={
-              `text-gray-600 border-2 px-5 py-1 cursor-pointer ${speciality ===
+              `text-gray-600 border-2 px-5 py-1 text-sm md:text-md cursor-pointer ${speciality ===
               "Pediatricians"
                 ? "bg-gray-300 text-black"
                 : ""}
@@ -80,7 +80,7 @@ const Doctors = () => {
                 : Navigate("/Doctor/Neurologist")
             }
             className={
-              `text-gray-600 border-2 px-5 py-1 cursor-pointer  ${speciality ===
+              `text-gray-600 border-2 px-5 py-1 text-sm md:text-md cursor-pointer  ${speciality ===
               "Neurologist"
                 ? "bg-gray-300 text-black"
                 : ""}
@@ -95,7 +95,7 @@ const Doctors = () => {
                 : Navigate("/Doctor/Gastroenterologist")
             }
             className={
-              `text-gray-600 border-2 px-5 py-1 cursor-pointer ${speciality ===
+              `text-gray-600 border-2 px-5 py-1 text-sm md:text-md cursor-pointer ${speciality ===
               "Gastroenterologist"
                 ? "bg-gray-300 text-black"
                 : ""}
@@ -104,7 +104,7 @@ const Doctors = () => {
             Gastroenterologist
           </p>
         </div>
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-wrap gap-10 lg:justify-normal justify-center">
           {filterspeciality.map((data) => {
             return (
               <div
@@ -112,14 +112,14 @@ const Doctors = () => {
                 onClick={() => Navigate("/Appointments/" + data._id)}
                 className="flex flex-col items-start bg-gray-200 rounded-xl p-2 gap-2 hover:translate-y-[-10px] transition-all duration-500 cursor-pointer"
               >
-                <img className="w-48" src={data.image} />
+                <img className="w-36 md:w-48" src={data.image} />
                 <div>
-                  <div className="flex gap-2 items-center text-sm">
+                  <div className="flex gap-2 items-center text-[12px] md:text-sm">
                     <p className="h-2 w-2 rounded-full bg-green-500"></p>
                     <p className="text-green-500">Available</p>
                   </div>
-                  <p className="font-semibold">{data.name}</p>
-                  <p className="text-sm">{data.speciality}</p>
+                  <p className="font-semibold md:text-sm text-[12px]">{data.name}</p>
+                  <p className="text-[12px] md:text-sm">{data.speciality}</p>
                 </div>
               </div>
             );
