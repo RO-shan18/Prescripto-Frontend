@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-import { doctors } from "../assets/assets";
 import  axios from "axios"
 
 export const Context  = createContext();
@@ -23,12 +22,8 @@ const AppContextProvider = ({children})=>{
       }
     }
 
-    useEffect(()=>{
-        doctorlist();
-    }, []);
-
     const value={
-        doctors, currency
+        doctors, currency, doctorlist
     };
 
     return(

@@ -1,10 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../Context/AppContext";
 
 const TopDoctor = () => {
-    const {doctors} = useContext(Context);
+    const {doctors, doctorlist} = useContext(Context);
     const Navigate = useNavigate();
+
+    useEffect(()=>{
+      doctorlist();
+    },[])
 
     console.log(doctors)
   return (
