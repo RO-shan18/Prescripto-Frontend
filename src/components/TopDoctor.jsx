@@ -5,6 +5,8 @@ import { Context } from "../Context/AppContext";
 const TopDoctor = () => {
     const {doctors} = useContext(Context);
     const Navigate = useNavigate();
+
+    console.log(doctors)
   return (
     <div className="flex flex-col items-center mt-10 md:mt-20 w-4/5 m-auto gap-8 md:gap-12">
       <div className="flex flex-col items-center gap-3">
