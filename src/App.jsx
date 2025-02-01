@@ -9,12 +9,14 @@ import My_appointments from "./pages/My-appointments"
 import Appointments from "./pages/Appointments"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import { ToastContainer, toast} from 'react-toastify';
 
 function App() {
  
   return (
    <div>
    <Navbar/>
+   <ToastContainer/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/About" element={<About/>} />
@@ -26,7 +28,7 @@ function App() {
         <Route path="/My_appointments" element={<My_appointments/>} />
         <Route path="/Appointments/:doctorid" element={<Appointments/>} />
       </Routes>
-
+     
       <Footer/>
    </div>
   )

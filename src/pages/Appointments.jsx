@@ -59,8 +59,6 @@ const Appointments = () => {
     }
   }
 
-  console.log("state change")
-
   useEffect(() => {
     setdocinfo(doctors.find((doc) => doc._id === doctorid));
   }, [doctorid]);

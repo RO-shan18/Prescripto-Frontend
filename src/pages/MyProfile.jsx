@@ -5,12 +5,12 @@ const MyProfile = () => {
   const [userData, setuserData] = useState({
     name: "Roshan Mehra",
     Email: "mehraoshan@gmail.com",
-    phone: "2+3 4444 5554",
+    phone: "+23 4444 5554",
     Address: {
       line1: "57th Cross, Richmond ",
       line2: "Circle, Church Road, London",
     },
-    Gender: "Male",
+    Gender: "",
     DOB: "19-02-2004",
   });
 
@@ -26,7 +26,7 @@ const MyProfile = () => {
             className="w-28"
             type="text"
             value={userData.name}
-            onChange={(prev) => ({ ...prev, name: e.target.value })}
+            onChange={(e) => setuserData((prev) => ({ ...prev, name: e.target.value }))}
           />
         ) : (
           <p className="font-semibold text-xl md:text-2xl pb-2">{userData.name}</p>
@@ -47,7 +47,7 @@ const MyProfile = () => {
             className="text-primary "
             type="text"
             value={userData.phone}
-            onChange={(prev) => ({ ...prev, phone: toString(e.target.value) })}
+            onChange={(e)=> setuserData((prev) => ({ ...prev, phone: e.target.value }))}
           />
         ) : (
           <p className="text-primary text-sm md:text-lg">{userData.phone}</p>
@@ -97,7 +97,7 @@ const MyProfile = () => {
           <p className="text-gray-600 text-sm md:text-lg">Gender</p>
           {
             isEdit ? (
-              <select className="text-gray-500 w-28" value={userData.Gender} onChange={e => setuserData(prev, {...prev, Gender:e.target.value})}>
+              <select className="text-gray-500 w-28" value={userData.Gender} onChange={(e) => setuserData((prev)=> ({...prev, Gender:e.target.value}))}>
                 <option value="male">Male</option>
                 <option value="female">Female</option> 
                 <option value="Other">Others</option> 
@@ -112,7 +112,7 @@ const MyProfile = () => {
           <p className="text-gray-600 text-sm md:text-lg">D.O.B</p>
           {
             isEdit ? (
-              <input  className="text-gray-500 w-28 "type="date" value={userData.DOB} onChange={e => setuserData(prev => ({...prev, DOB:e.target.value}))}/>
+              <input  className="text-gray-500 w-28 "type="date" value={userData.DOB} onChange={(e) => setuserData(prev => ({...prev, DOB:e.target.value}))}/>
             ): (
               <p className="text-gray-500 text-sm md:text-lg">{userData.DOB}</p>
             )

@@ -6,6 +6,7 @@ export const Context  = createContext();
 const AppContextProvider = ({children})=>{
 
     const [doctors, setdoctors] = useState([]);
+    const [token, settoken] = useState(localStorage.getItem('token')? true : false)
 
     const currency = "$";
 
@@ -23,7 +24,7 @@ const AppContextProvider = ({children})=>{
     }
 
     const value={
-        doctors, currency, doctorlist
+        doctors, currency, doctorlist, Backendurl, settoken, token
     };
 
     return(
