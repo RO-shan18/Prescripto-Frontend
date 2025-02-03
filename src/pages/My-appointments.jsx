@@ -17,8 +17,8 @@ const My_appointments = () => {
                 <div><p className="text-xl md:text-xl lg:text-2xl font-semibold">{item.name}</p>
                 <p className="text-gray-500 text-lg md:text-sm lg:text-lg">{item.speciality}</p></div>
                 <div><p className="font-semibold text-gray-700 text-lg md:text-sm lg:text-lg">Address:</p>
-                <p className="text-gray-500 text-sm text-[12px] lg:text-sm">{item.address.line1}</p>
-                <p className="text-gray-500 text-sm text-[12px] lg:text-sm">{item.address.line2}</p></div>
+                <p className="text-gray-500 text-sm text-[12px] lg:text-sm">{}</p>
+                <p className="text-gray-500 text-sm text-[12px] lg:text-sm">{}</p></div>
                 <p className="text-gray-500 text-sm text-[12px] lg:text-sm">
                   <span className="text-gray-700 font-semibold text-lg lg:text-lg md:text-sm">Date & Time: </span>25, July, 2024 | 8:30 PM
                 </p>

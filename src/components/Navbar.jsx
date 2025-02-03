@@ -6,7 +6,7 @@ import { Context } from "../Context/AppContext";
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const {token, settoken} = useContext(Context);
+  const {token, settoken, userData} = useContext(Context);
 
   const logout = ()=>{
     localStorage.removeItem('token');
@@ -16,6 +16,8 @@ const Navbar = () => {
   useEffect(()=>{
     if(token)
     navigate("/")
+    else
+    navigate("/login")
   },[token]);
 
   return (
@@ -42,7 +44,7 @@ const Navbar = () => {
       <div>
         {token ? (
             <div className="flex items-center gap-2 group relative">
-                <img className="w-7 sm:w-9 rounded-full" src={assets.profile_pic} alt="user-profile"/> 
+                <img className="w-7 sm:w-9 rounded-full" src={userData.image} alt="user-profile"/> 
                 <img src={assets.dropdown_icon} className="w-2 sm:w-3" alt="dropdown" />
 
                 <div className="flex flex-col justify-start text-black absolute top-10 right-0">
