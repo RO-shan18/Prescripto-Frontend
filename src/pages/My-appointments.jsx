@@ -12,7 +12,7 @@ const My_appointments = () => {
         {doctors.slice(0, 3).map((item, index) => {
           return (
             <div className="flex flex-col gap-6 items-center justify-center md:grid md:grid-cols-[1fr_1fr_1fr] lg:grid-cols-[1fr_3fr_1fr] " key={index}>
-              <img className="w-[300px] md:w-52 bg-zinc-200 rounded-lg " src={item.image} />
+              <img className="w-[300px] md:w-52 bg-zinc-200 rounded-lg " src={item?.image} />
               <div className="flex flex-col gap-2 lg:gap-4">
                 <div><p className="text-xl md:text-xl lg:text-2xl font-semibold">{item.name}</p>
                 <p className="text-gray-500 text-lg md:text-sm lg:text-lg">{item.speciality}</p></div>

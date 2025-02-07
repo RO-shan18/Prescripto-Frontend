@@ -10,7 +10,7 @@ const Header = () => {
         <h1 className='text-center sm:text-left text-2xl sm:text-3xl lg:text-5xl font-semibold'>Book Appointment <br className='lg:block hidden'/>
         With Trusted Doctors </h1> 
         <div className='flex gap-3 sm:flex-nowrap flex-wrap text-center sm:text-left items-center justify-center'>
-            <img src={assets.group_profiles} className=':w-20 h-10'/>
+            <img src={assets?.group_profiles} className=':w-20 h-10'/>
             <p className='text-[12px] sm:text-sm'>Simply browse through our extensive list of trusted doctors, <br className='lg:block hidden'/>
             schedule your appointment hassle-free.</p>
         </div>
@@ -20,7 +20,7 @@ const Header = () => {
         </a>
         </div>
         {/* ------------Right Side ---------- */}
-            <img className='w-[80%] lg:w-[50%]' src={assets.header_img} />
+            <img className='w-[80%] lg:w-[50%]' src={assets?.header_img} />
         </div>
     </div>
   )

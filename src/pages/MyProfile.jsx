@@ -52,7 +52,7 @@ const MyProfile = () => {
             <div>
               <label htmlFor="image">
                 <img
-                  src={image ? URL.createObjectURL(image) : userData.image}
+                  src={image ? URL.createObjectURL(image) : userData?.image}
                 />
               
               </label>
@@ -64,21 +64,21 @@ const MyProfile = () => {
               />
             </div>
           ) : (
-            <img className="w-36 rounded-lg mb-5" src={userData.image} />
+            <img className="w-36 rounded-lg mb-5" src={userData?.image} />
           )}
 
           {isEdit ? (
             <input
               className="w-28"
               type="text"
-              value={userData.name}
+              value={userData?.name}
               onChange={(e) =>
                 setuserData((prev) => ({ ...prev, name: e.target.value }))
               }
             />
           ) : (
             <p className="font-semibold text-xl md:text-2xl pb-2">
-              {userData.name}
+              {userData?.name}
             </p>
           )}
           <hr className="border-b-1 border-gray-400 pb-3" />
@@ -90,7 +90,7 @@ const MyProfile = () => {
             <div className="grid grid-cols-2cols md:grid-cols-2col">
               <p className="text-gray-600 text-sm md:text-lg">Email:</p>
               <p className="text-primary text-sm md:text-lg">
-                {userData.email}
+                {userData?.email}
               </p>
             </div>
 
@@ -100,14 +100,14 @@ const MyProfile = () => {
                 <input
                   className="text-primary "
                   type="text"
-                  value={userData.phoneno}
+                  value={userData?.phoneno}
                   onChange={(e) =>
                     setuserData((prev) => ({ ...prev, phoneno: e.target.value }))
                   }
                 />
               ) : (
                 <p className="text-primary text-sm md:text-lg">
-                  {userData.phoneno}
+                  {userData?.phoneno}
                 </p>
               )}
             </div>
@@ -119,7 +119,7 @@ const MyProfile = () => {
                   <input
                     className="text-gray-500"
                     type="text"
-                    value={userData.Address.line1}
+                    value={userData?.Address?.line1}
                     onChange={(e) =>
                       setuserData((prev) => ({
                         ...prev,
@@ -131,7 +131,7 @@ const MyProfile = () => {
                   <input
                     className="text-gray-500"
                     type="text"
-                    value={userData.Address.line2}
+                    value={userData?.Address?.line2}
                     onChange={(e) =>
                       setuserData((prev) => ({
                         ...prev,
@@ -143,10 +143,10 @@ const MyProfile = () => {
               ) : (
                 <div>
                   <p className="text-gray-600 text-sm md:text-lg">
-                    {userData.Address.line1}
+                    {userData?.Address?.line1}
                   </p>
                   <p className="text-gray-600 text-sm md:text-lg">
-                    {userData.Address.line2}
+                    {userData?.Address?.line2}
                   </p>
                 </div>
               )}
@@ -162,7 +162,7 @@ const MyProfile = () => {
               {isEdit ? (
                 <select
                   className="text-gray-500 w-28"
-                  value={userData.Gender}
+                  value={userData?.Gender}
                   onChange={(e) =>
                     setuserData((prev) => ({ ...prev, Gender: e.target.value }))
                   }
@@ -173,7 +173,7 @@ const MyProfile = () => {
                 </select>
               ) : (
                 <p className="text-gray-500 text-sm md:text-lg">
-                  {userData.Gender}
+                  {userData?.Gender}
                 </p>
               )}
             </div>
@@ -184,14 +184,14 @@ const MyProfile = () => {
                 <input
                   className="text-gray-500 w-28 "
                   type="date"
-                  value={userData.DOB}
+                  value={userData?.DOB}
                   onChange={(e) =>
                     setuserData((prev) => ({ ...prev, DOB: e.target.value }))
                   }
                 />
               ) : (
                 <p className="text-gray-500 text-sm md:text-lg">
-                  {userData.DOB}
+                  {userData?.DOB}
                 </p>
               )}
             </div>

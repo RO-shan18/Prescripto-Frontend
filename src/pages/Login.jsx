@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../Context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -21,7 +21,7 @@ const Login = () => {
       const { data } = await axios.post(
         Backendurl + "/api/user/register",
         { email, password, name },
-        { withCredentials: true }
+        { withCredentials:true }
       );
 
       if (data.success) {
@@ -37,7 +37,7 @@ const Login = () => {
       const { data } = await axios.post(
         Backendurl + "/api/user/login",
         { email, password },
-        { withCredentials: true }
+        {withCredentials:true }
       );
 
       if (data.success) {
