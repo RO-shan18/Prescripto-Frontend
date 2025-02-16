@@ -28,7 +28,6 @@ function App() {
         <Route path="/My_appointments" element={<My_appointments/>} />
         <Route path="/Appointments/:doctorid" element={<Appointments/>} />
       </Routes>
-     
       <Footer/>
    </div>
   )

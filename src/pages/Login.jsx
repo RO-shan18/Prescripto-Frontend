@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { Context } from "../Context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { Backendurl, settoken} = useContext(Context)
